@@ -1,0 +1,15 @@
+name: 'Publish comment'
+description: 'Publish comment with url to jira task page'
+inputs:
+  url_prefix:
+    description: 'Url prefix is used for building url to task page'
+    required: true
+  task_number:
+    description: 'Task number'
+    required: true
+  GITHUB_TOKEN:
+    description: 'GITHUB_TOKEN'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
