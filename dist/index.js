@@ -5666,7 +5666,7 @@ async function run() {
         const botLogin = 'github-actions[bot]'
 
         const comment = comments.find(c => {
-            return c.user.login == botLogin
+            return c.user.login == botLogin && c.body.match(urlPrefix)
         })
 
         if (comment) {
